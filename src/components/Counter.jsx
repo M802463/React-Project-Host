@@ -7,16 +7,8 @@ function App() {
         setCount(count + 1)
     }
 
-    const showalert = () => {
-        if (prevCount == 0) {
-            return 0
-        } else if(prevCount < 0) {
-            alert("don't click again and again value not decrease much more")
-        }
-    } 
-
     const decrease = () => {
-        setCount(prevCount => (prevCount > 0 ? prevCount - 1 : showalert));
+        setCount(prevCount => (prevCount > 0 ? prevCount - 1 : 0));
     };
 
     return (
